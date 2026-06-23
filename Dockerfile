@@ -33,16 +33,16 @@ RUN mkdir -p /usr/lib/firefox/browser/defaults/preferences/ && \
     echo 'pref("signon.autologin.proxy", true);' >> /usr/lib/firefox/browser/defaults/preferences/syspref.js
 
 # 6. Global System Proxy Environment Variables (Credentials Injection)
-ENV http_proxy="http://zhogyichan.custom36:hello123@154.198.32.71:8083/"
-ENV https_proxy="http://zhogyichan.custom36:hello123@154.198.32.71:8083/"
+ENV http_proxy="http://zhogyichan.custom38:hello123@154.198.32.71:8083/"
+ENV https_proxy="http://zhogyichan.custom38:hello123@154.198.32.71:8083/"
 
 # 7. Startup Script (Silent execution with proxy network environment)
 RUN echo '#!/bin/bash\n\
 Xvfb :99 -screen 0 1280x720x24 &\n\
 export DISPLAY=:99\n\
 \n\
-export HTTP_PROXY="http://zhogyichan.custom36:hello123@154.198.32.71:8083/"\n\
-export HTTPS_PROXY="http://zhogyichan.custom36:hello123@154.198.32.71:8083/"\n\
+export HTTP_PROXY="http://zhogyichan.custom38:hello123@154.198.32.71:8083/"\n\
+export HTTPS_PROXY="http://zhogyichan.custom38:hello123@154.198.32.71:8083/"\n\
 \n\
 firefox --new-instance "https://www.ebesucher.com/surfbar/$SURFBAR" &\n\
 tail -f /dev/null\n\
