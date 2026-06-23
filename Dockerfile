@@ -12,9 +12,9 @@ RUN apt-get update && apt-get install -y \
     wget \
     && rm -rf /var/lib/apt/lists/*
 
-# 4. eBesucher ka Official Addon download karke auto-install karna
+# 4. Tumhara direct link use karke Addon download aur auto-install karna
 RUN mkdir -p /usr/lib/firefox/distribution/extensions/
-RUN wget -O /usr/lib/firefox/distribution/extensions/addon@ebesucher.com.xpi https://www.ebesucher.com/data/firefoxaddon/latest.xpi
+RUN wget -O /usr/lib/firefox/distribution/extensions/addon@ebesucher.com.xpi https://addons.mozilla.org/android/downloads/file/4828981/surf_click-1.0.1.xpi
 
 # 5. Startup Script banana
 RUN echo '#!/bin/bash\n\
